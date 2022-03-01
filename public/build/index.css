@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.site-header{
+    background-color: #262626;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.container-logo{
+    width: 10rem;
+}
+
+.container-logo__img{
+        width: 100%;
+    }

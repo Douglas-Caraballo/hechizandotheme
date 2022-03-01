@@ -1,0 +1,6 @@
+.container-logo{
+    width: 10rem;
+    &__img{
+        width: 100%;
+    }
+}
