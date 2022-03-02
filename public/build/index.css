@@ -15,8 +15,9 @@ ul{
 .site-header{
     background-color: #262626;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0.5rem 0;
+    align-items: center;
 }
 
 .container-logo{
