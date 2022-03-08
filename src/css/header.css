@@ -1,2 +1,3 @@
-@import './header/nav-menu.css';
 @import './header/logo.css';
+@import './header/nav-menu.css';
+@import './header/fullscreen-search.css';

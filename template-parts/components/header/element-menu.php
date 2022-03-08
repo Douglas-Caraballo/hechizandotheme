@@ -8,4 +8,9 @@
 
         wp_nav_menu($args);
     ?>
+    <ul>
+        <li>
+            <?php get_template_part('template-parts/components/header/element-search','desktop'); ?>
+        </li>
+    </ul>
 </div>
