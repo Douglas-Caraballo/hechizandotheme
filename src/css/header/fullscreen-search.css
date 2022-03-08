@@ -1,33 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-a{
-    text-decoration: none;
-}
-
-ul{
-    list-style: none;
-}
-
-.container-logo{
-    width: 10rem;
-}
-
-.container-logo__img{
-        width: 100%;
-    }
-
-.site-header{
-    background-color: #262626;
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5rem 0;
-    align-items: center;
-}
-
 .overlay{
     width: 100%;
     height: 100%;
@@ -38,9 +8,9 @@ ul{
     left: 0;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
-}
 
-.overlay__close-btn{
+
+    &__close-btn{
         color: white;
         position: absolute;
         font-size: 2rem;
@@ -49,13 +19,13 @@ ul{
         cursor: pointer;
         transition: all 0.5s;
     }
+}
 
 .open-btn{
     background: transparent;
     border: none;
     cursor: pointer;
 }
-
 .scroll-desactivate{
     overflow: hidden;
 }
