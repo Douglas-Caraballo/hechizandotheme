@@ -25,6 +25,8 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    color: white;
+    font-size: 1rem;
 }
 .scroll-desactivate{
     overflow: hidden;

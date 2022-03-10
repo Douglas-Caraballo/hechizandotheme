@@ -1,0 +1,21 @@
+.container-hamburger{
+    .container-hamburger__menu{
+        display: block;
+        cursor: pointer;
+        z-index: 10;
+        position: relative;
+        .container-hamburger__line{
+            width: 2rem;
+            height: 0.25rem;
+            background-color: white;
+            margin: 0.25rem;
+            transition: all 0.3s;
+        }
+    }
+}
+
+@media only screen and (min-width: 1020px){
+    .container-hamburger{
+        display: none;
+    }
+}

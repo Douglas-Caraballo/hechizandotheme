@@ -19,6 +19,16 @@ eval("function openSearch(){\n    document.getElementById(\"my-search\").style.d
 
 /***/ }),
 
+/***/ "./src/js/hamburger.js":
+/*!*****************************!*\
+  !*** ./src/js/hamburger.js ***!
+  \*****************************/
+/***/ (() => {
+
+eval("const hamburger =document.querySelector('#hamburger'),\n    menu = document.querySelector('#menu'),\n    close = document.querySelector('#close');\n\nhamburger.addEventListener('click', (e)=>{\n    menu.classList.toggle('aside-activate');\n});\n\nclose.addEventListener('click', (e)=>{\n    menu.classList.toggle('aside-activate');\n});\n\n//# sourceURL=webpack://underscores/./src/js/hamburger.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -26,7 +36,7 @@ eval("function openSearch(){\n    document.getElementById(\"my-search\").style.d
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fullscreen-search */ \"./src/js/fullscreen-search.js\");\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullscreen_search__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack://underscores/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fullscreen-search */ \"./src/js/fullscreen-search.js\");\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullscreen_search__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hamburger */ \"./src/js/hamburger.js\");\n/* harmony import */ var _hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_hamburger__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack://underscores/./src/js/index.js?");
 
 /***/ })
 
