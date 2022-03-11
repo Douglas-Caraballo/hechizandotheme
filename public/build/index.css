@@ -107,6 +107,51 @@ ul{
             color: white;
         }
 
+.aside-menu__wrapper_list .search-container{
+        position: relative;
+        padding: 1rem 0;
+    }
+
+.aside-menu__wrapper_list .search-container__search-bar{
+            width:100%;
+            border-radius:2rem;
+            background:transparent;
+            color: white;
+            height: 2rem;
+            font-weight:600;
+            border-width:1px;
+            padding: 0 1rem;
+        }
+
+.aside-menu__wrapper_list .search-container__button{
+            position: absolute;
+            background: transparent;
+            right: 0.5rem;
+            bottom: 1.4rem;
+            border: none;
+            border-radius: 2rem;
+        }
+
+.aside-menu__wrapper_list .search-container__button__img{
+                width: 1rem;
+            }
+
+.aside-menu__wrapper_list .social-list{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+.aside-menu__wrapper_list .social-list li{
+            border-bottom: none;
+            padding: 0.5rem;
+        }
+
+.aside-menu__wrapper_list .social-list li img{
+                width: 1.25rem;
+            }
+
 @media only screen and (min-width: 1020px){
     .aside-menu{
         display: none;

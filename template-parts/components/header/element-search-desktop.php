@@ -6,5 +6,5 @@
 </div>
 
 <button class="open-btn">
-    <img src="" alt="buscar">
+    <img src="<?= get_template_directory_uri().'/dist/assets/img/search.png' ?>" alt="buscar">
 </button>
