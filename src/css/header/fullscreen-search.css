@@ -54,6 +54,14 @@
     cursor: pointer;
     color: white;
     font-size: 1rem;
+    line-height: 4rem;
+    padding: 0 1rem;
+    img{
+        width: 1rem;
+    }
+}
+.open-btn:hover{
+    background-color: #111;
 }
 .scroll-desactivate{
     overflow: hidden;

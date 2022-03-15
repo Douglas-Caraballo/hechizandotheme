@@ -2,7 +2,6 @@
     background-color: #262626;
     display: flex;
     justify-content: space-around;
-    padding: 0.5rem 0;
     align-items: center;
 }
 .menu-nav{
@@ -15,8 +14,27 @@
         gap:1rem;
     }
     .menu-nav-desktop{
-        a{
-            color: white;
+        display: flex;
+        gap: 0.5rem;
+        .menu-item{
+            height: 100%;
+            transition: all 0.5s;
+            padding: 0 0.5rem;
+            a{
+                color: white;
+                font-weight: bold;
+                transition: all 0.5s;
+                line-height: 4rem;
+                display: flex;
+                height: 4rem;
+                text-transform: uppercase;
+            }
+        }
+        .menu-item:hover{
+            background-color: #111;
+            a{
+                color: #c7a770;
+            }
         }
     }
 }

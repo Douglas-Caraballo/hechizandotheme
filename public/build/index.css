@@ -24,7 +24,6 @@ ul{
     background-color: #262626;
     display: flex;
     justify-content: space-around;
-    padding: 0.5rem 0;
     align-items: center;
 }
 
@@ -37,9 +36,30 @@ ul{
         display: flex;
         gap:1rem;
     }
-        .menu-nav-desktop a{
-            color: white;
+    .menu-nav-desktop{
+        display: flex;
+        gap: 0.5rem;
+    }
+        .menu-nav-desktop .menu-item{
+            height: 100%;
+            transition: all 0.5s;
+            padding: 0 0.5rem;
         }
+            .menu-nav-desktop .menu-item a{
+                color: white;
+                font-weight: bold;
+                transition: all 0.5s;
+                line-height: 4rem;
+                display: flex;
+                height: 4rem;
+                text-transform: uppercase;
+            }
+        .menu-nav-desktop .menu-item:hover{
+            background-color: #111;
+        }
+            .menu-nav-desktop .menu-item:hover a{
+                color: #c7a770;
+            }
 }
 
 .container-hamburger .container-hamburger__menu{
@@ -220,6 +240,16 @@ ul{
     cursor: pointer;
     color: white;
     font-size: 1rem;
+    line-height: 4rem;
+    padding: 0 1rem;
+}
+
+.open-btn img{
+        width: 1rem;
+    }
+
+.open-btn:hover{
+    background-color: #111;
 }
 
 .scroll-desactivate{
