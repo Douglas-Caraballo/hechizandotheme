@@ -5,3 +5,18 @@
     padding: 0.5rem 0;
     align-items: center;
 }
+.menu-nav{
+    display: none;
+}
+
+@media only screen and (min-width: 1020px) {
+    .menu-nav{
+        display: flex;
+        gap:1rem;
+    }
+    .menu-nav-desktop{
+        a{
+            color: white;
+        }
+    }
+}

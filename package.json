@@ -20,6 +20,7 @@
     "@wordpress/scripts": "^12.1.0",
     "autoprefixer": "^10.4.2",
     "dir-archiver": "^1.1.1",
+    "gulp-postcss": "^9.0.1",
     "node-sass": "^4.14.1",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
