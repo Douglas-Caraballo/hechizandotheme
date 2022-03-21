@@ -36,7 +36,17 @@ eval("const hamburger =document.querySelector('#hamburger'),\n    menu = documen
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fullscreen-search */ \"./src/js/fullscreen-search.js\");\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullscreen_search__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hamburger */ \"./src/js/hamburger.js\");\n/* harmony import */ var _hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_hamburger__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack://underscores/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fullscreen-search */ \"./src/js/fullscreen-search.js\");\n/* harmony import */ var _fullscreen_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullscreen_search__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hamburger */ \"./src/js/hamburger.js\");\n/* harmony import */ var _hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_hamburger__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./slider */ \"./src/js/slider.js\");\n/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack://underscores/./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/slider.js":
+/*!**************************!*\
+  !*** ./src/js/slider.js ***!
+  \**************************/
+/***/ (() => {
+
+eval("const slider = document.querySelector('#slider');\nlet sliderSection = document.querySelectorAll('.featured-item');\nlet sliderSectionLast = sliderSection[sliderSection.length-1];\nconst btnLeft = document.querySelector('#button-left');\nconst btnRight = document.querySelector('#button-right');\n\nslider.insertAdjacentElement(\"afterbegin\", sliderSectionLast);\n\nfunction next(){\n    let sliderSectionFirst = document.querySelectorAll('.featured-item')[0];\n    slider.classList.add('move-right');\n    setTimeout(function(){\n        slider.classList.remove('move-right');\n        slider.insertAdjacentElement(\"beforeend\",sliderSectionFirst);\n    },700);\n}\n\nfunction prev(){\n    let sliderSection = document.querySelectorAll('.featured-item');\n    let sliderSectionLast = sliderSection[sliderSection.length-1];\n    slider.classList.add('move-left');\n    setTimeout(function(){\n        slider.classList.remove('move-left');\n        slider.insertAdjacentElement(\"afterbegin\", sliderSectionLast);\n    },700);\n}\n\nbtnRight.addEventListener('click',(e)=>{\n    next();\n});\nbtnLeft.addEventListener('click',(e)=>{\n    prev();\n});\n\nsetInterval((e)=>{\n    next();\n},4000);\n\n//# sourceURL=webpack://underscores/./src/js/slider.js?");
 
 /***/ })
 
