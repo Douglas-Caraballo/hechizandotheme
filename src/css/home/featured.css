@@ -25,6 +25,15 @@
         gap: 2rem;
         text-transform: uppercase;
         font-size: 0.9rem;
+        color: white;
+        &__redirect{
+            font-size: 0.7rem;
+            text-decoration:underline;
+        }
+        a{
+            color:white;
+            font-weight: bold;
+        }
     }
 }
 .featured-img{
@@ -47,6 +56,7 @@
     font-weight: bold;
     cursor: pointer;
     transform: translateY(-50%);
+    transition: all 0.7s;
 }
 .button-left{
     left: 0.5rem;
@@ -78,5 +88,9 @@
     }
     .move-left{
         margin-left: 0;
+    }
+    .featured-button:hover{
+        background-color: black;
+        
     }
 }
