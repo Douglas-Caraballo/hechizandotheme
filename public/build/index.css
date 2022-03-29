@@ -364,7 +364,7 @@ ul{
     }
     .featured-button:hover{
         background-color: black;
-        
+        transform: scale(1.1) translateY(-50%);
     }
 }
 
@@ -404,10 +404,29 @@ ul{
     }
 
 @media only screen and (min-width: 1020px){
+    .wrapper-categories{
+        flex-wrap: nowrap;
+        width: 100%;
+    }
     .wrapper-category-img{
-        width: 16.5rem;
+        width: 21rem;
+    }
+    .category-item{
+        width: 25%;
     }
         .category-item__name{
-            left: 5.5rem;
+            left: 8rem;
         }
+}
+
+.wrapper-home{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-head{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }

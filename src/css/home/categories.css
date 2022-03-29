@@ -29,12 +29,17 @@
 }
 
 @media only screen and (min-width: 1020px){
+    .wrapper-categories{
+        flex-wrap: nowrap;
+        width: 100%;
+    }
     .wrapper-category-img{
-        width: 16.5rem;
+        width: 21rem;
     }
     .category-item{
+        width: 25%;
         &__name{
-            left: 5.5rem;
+            left: 8rem;
         }
     }
 }
