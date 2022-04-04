@@ -190,3 +190,8 @@ require get_template_directory(). '/inc/taxonomies.php';
  * Register widgets areas
  */
 require get_template_directory(). '/inc/widgets-areas.php';
+
+/**
+ * Display views per post
+ */
+require get_template_directory(). '/inc/views.php';
