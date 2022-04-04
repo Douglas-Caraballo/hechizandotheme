@@ -1,5 +1,7 @@
 @import './home/featured.css';
 @import './home/categories.css';
+@import './home/content-home.css';
+@import './home/widget-home.css';
 
 .wrapper-home{
     display: flex;
