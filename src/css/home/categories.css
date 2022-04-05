@@ -33,9 +33,10 @@
     .wrapper-categories{
         flex-wrap: nowrap;
         width: 100%;
+        gap: 0;
     }
     .wrapper-category-img{
-        width: 21rem;
+        width: 100%;
     }
     .category-item{
         width: 25%;

@@ -6,8 +6,8 @@
         ?>
     </div>
     <div class="home-content">
-        <p>content</p>
         <?php
+            get_template_part('template-parts/components/home/element','post');
             get_template_part('template-parts/components/home/element-widget','home');
         ?>
     </div>
