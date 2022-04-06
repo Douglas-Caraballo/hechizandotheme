@@ -22,7 +22,7 @@ $taxonomie = ['category'];
                 <article class="content-post__item">
                     <figure class="content-post__item__img">
                         <a href="<?= esc_url(get_permalink($homeQuery->id)); ?>">
-                            <?php the_post_thumbnail( '', ['class'=>'post-image']); ?>
+                            <?php the_post_thumbnail('', ['class'=>'home-image']); ?>
                         </a>
                     </figure>
                     <div class="content-post__item__info">
@@ -30,7 +30,7 @@ $taxonomie = ['category'];
                             <?php the_title('<h3 class=post-title><a href='.get_the_permalink().'>','</a></h3>'); ?>
                         </span>
                         <div class="content-post__item__info__details">
-                            <span>
+                            <span class="category-home">
                                 <h5>
                                     <?php
                                         $term = wp_get_post_terms(get_the_ID(),$taxonomie);
@@ -45,7 +45,7 @@ $taxonomie = ['category'];
                         <div class="content-post__item__info__excerpt">
                             <?php the_excerpt(); ?>
                         </div>
-                        <span><a href="<?php echo esc_url(get_permalink($homeQuery->id));?>">Leer más</a></span>
+                        <a class="see-more-redirect" href="<?php echo esc_url(get_permalink($homeQuery->id));?>">Leer más &rarr;</a>
                     </div>
                 </article>
             <?php endwhile; ?>
