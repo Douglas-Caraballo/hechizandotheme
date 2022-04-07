@@ -30,10 +30,16 @@
                 gap: 0.5rem;
                 justify-content:center;
                 align-items:center;
+                font-family: 'Lancelot', 'cursive';
+                h5{
+                    font-size: 0.9rem;
+                    font-weight: bolder;
+                }
             }
             &__excerpt{
                 font-family: 'Lancelot', 'cursive';
                 font-size: 1.2rem;
+                text-align: justify;
             }
         }
     }
@@ -93,7 +99,7 @@
     .content-post{
         &__item{
             flex-direction: row;
-            gap: 5rem;
+            gap: 3rem;
             &__img{
                 width: 25rem;
                 height: 18rem;

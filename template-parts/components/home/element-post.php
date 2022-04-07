@@ -45,7 +45,7 @@ $taxonomie = ['category'];
                         <div class="content-post__item__info__excerpt">
                             <?php the_excerpt(); ?>
                         </div>
-                        <a class="see-more-redirect" href="<?php echo esc_url(get_permalink($homeQuery->id));?>">Leer más &rarr;</a>
+                        <a class="see-more-redirect" href="<?php echo esc_url(get_permalink($homeQuery->id));?>">Leer Más &rarr;</a>
                     </div>
                 </article>
             <?php endwhile; ?>

@@ -25,6 +25,10 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 111;
 }
 
 .menu-nav{
@@ -187,7 +191,7 @@ ul{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .overlay__content{
@@ -463,11 +467,18 @@ ul{
                 gap: 0.5rem;
                 justify-content:center;
                 align-items:center;
+                font-family: 'Lancelot', 'cursive';
             }
+
+.content-post__item__info__details h5{
+                    font-size: 0.9rem;
+                    font-weight: bolder;
+                }
 
 .content-post__item__info__excerpt{
                 font-family: 'Lancelot', 'cursive';
                 font-size: 1.2rem;
+                text-align: justify;
             }
 
 .post-title{
@@ -533,7 +544,7 @@ ul{
     }
         .content-post__item{
             flex-direction: row;
-            gap: 5rem;
+            gap: 3rem;
         }
             .content-post__item__img{
                 width: 25rem;
@@ -566,10 +577,44 @@ ul{
     padding: 0 0.5rem;
 }
 
+.widget-area-home a{
+        color: #000;
+        transition: all 0.5s;
+    }
+
+.widget-area-home .widget_recent_entries .wp-block-latest-posts__list{
+            display: flex;
+            flex-direction: column;
+            gap:0.5rem;
+            font-family: 'Lancelot', 'cursive';
+        }
+
+.widget-area-home .widget_recent_entries li{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+.widget-area-home .widget_recent_entries li a{
+                font-size: 1.2rem;
+            }
+
+.widget-area-home .widget_recent_entries .wp-block-latest-posts__featured-image .wp-post-image{
+                border-radius: 9999px;
+            }
+
 @media only screen and (min-width: 1020px){
     .wrapper-home-widgets{
         width: 26%;
+        position: -webkit-sticky;
+        position: sticky;
+        height: 100%;
+        z-index: 1;
+        top:1rem;
     }
+        .wrapper-home-widgets a:hover{
+            color: #c7a770;
+        }
 }
 
 .wrapper-home{
