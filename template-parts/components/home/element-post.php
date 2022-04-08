@@ -31,16 +31,16 @@ $taxonomie = ['category'];
                         </span>
                         <div class="content-post__item__info__details">
                             <span class="category-home">
-                                <h5>
+                                <h5 class="category-name">
                                     <?php
                                         $term = wp_get_post_terms(get_the_ID(),$taxonomie);
                                         echo $term[0]->name;
                                     ?>
                                 </h5>
                             </span>
-                            <span><h5><?php echo get_the_date('M d, Y');?></h5></span>
-                            <span><h5><?php the_author(); ?></h5></span>
-                            <span><h5><?php echo ($postVews); ?> views </h5></span>
+                            <span><h5 class="post-date"><?php echo get_the_date('M d, Y');?></h5></span>
+                            <span><h5 class="post-author"><?php the_author(); ?></h5></span>
+                            <span><h5 class="post-views"><?php echo ($postVews); ?> views </h5></span>
                         </div>
                         <div class="content-post__item__info__excerpt">
                             <?php the_excerpt(); ?>

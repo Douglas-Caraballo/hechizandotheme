@@ -150,6 +150,10 @@ function hechizandotheme_scripts() {
 	wp_enqueue_style('limelight_google_fonts', "https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 	wp_enqueue_style('lancelot_google_fonts', "https://fonts.googleapis.com/css2?family=Lancelot&display=swap");
 
+	wp_localize_script( 'tema-script','requestListPostVar', array(
+		'url' => rest_url('post/posts'),
+        'nonce' => wp_create_nonce('wp_rest'),
+	));
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -196,3 +200,8 @@ require get_template_directory(). '/inc/widgets-areas.php';
  * Display views per post
  */
 require get_template_directory(). '/inc/views.php';
+
+/**
+ * Register the endpoint and the function see more
+ */
+require get_template_directory(). '/inc/endpoint.php';
