@@ -1,8 +1,14 @@
 <?php
 	while ( have_posts() ) :
 		the_post();
-
-		get_template_part( 'template-parts/components/single/element', 'single');
+?>
+	<div class="wrapper-single">
+		<?php
+			get_template_part('template-parts/components/single/element', 'single');
+			get_template_part('template-parts/components/single/element-widget', 'single');
+		?>
+	</div>
+	<?php
 
 		the_post_navigation(
 			array(

@@ -632,6 +632,12 @@ ul{
 .wrapper-single{
     display: flex;
     flex-direction: column;
+    gap:1rem;
+}
+
+.post-single{
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
@@ -706,7 +712,10 @@ ul{
 
 @media only screen and (min-width: 1020px){
     .wrapper-single{
-        width: 68%;
+        flex-direction: row;
+    }
+    .post-single{
+        width: 72%;
     }
     .single-header{
         padding: 0 3rem;
@@ -714,11 +723,81 @@ ul{
         .single-header__details{
         }
         .single-header__figure{
-            height: 50%;
         }
     .wrapper-content{
         padding: 0 3rem;
     }
+}
+
+.wrapper-widget-single{
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100%;
+    top: 1rem;
+    padding: 0 1.5rem;
+}
+
+.widget-area-single{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.widget-area-single .widget_categories .wp-block-categories-list{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+.widget-area-single .widget_categories .wp-block-categories-list .cat-item{
+                color: #000;
+                display: flex;
+                justify-content: space-between;
+                transition: all 0.5s;
+            }
+
+.widget-area-single .widget_categories .wp-block-categories-list .cat-item a{
+                    color: #000;
+                    font-weight: bold;
+                    font-family: 'Lancelot', 'cursive';
+                    font-size: 1.2rem;
+                    transition: all 0.5s;
+                }
+
+.widget-area-single .widget_recent_entries .wp-block-latest-posts__list{
+            display: flex;
+            flex-direction: column;
+            gap:0.8rem;
+        }
+
+.widget-area-single .widget_recent_entries .wp-block-latest-posts__list li{
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+.widget-area-single .widget_recent_entries .wp-block-latest-posts__list li .wp-block-latest-posts__featured-image .wp-post-image{
+                        border-radius: 9999px;
+                    }
+
+.widget-area-single .widget_recent_entries .wp-block-latest-posts__list li a{
+                    color: #000;
+                    font-family: 'Lancelot', 'cursive';
+                    font-weight: bold;
+                }
+
+@media only screen and (min-width: 1020px){
+    .wrapper-widget-single{
+        width: 20%;
+        padding: 0 0;
+    }
+                .widget-area-single .widget_categories .wp-block-categories-list .cat-item:hover{
+                    color:#c7a770;
+                }
+                    .widget-area-single .widget_categories .wp-block-categories-list .cat-item a:hover{
+                        color:#c7a770;
+                    }
 }
 
 .lower-bar{

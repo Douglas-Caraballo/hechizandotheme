@@ -1,7 +1,7 @@
 <?php
     $post_views= get_post_views(get_the_ID());
 ?>
-<div class="wrapper-single">
+<div class="post-single">
     <div class="single-header">
         <div class="single-header__details">
             <div class="single-header__details__category-date">
