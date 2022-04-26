@@ -205,3 +205,9 @@ require get_template_directory(). '/inc/views.php';
  * Register the endpoint and the function see more
  */
 require get_template_directory(). '/inc/endpoint.php';
+
+/**
+ * Register the function to display the navigation post with image
+ */
+
+require get_template_directory(). '/ing/navigation-single-post.php';
