@@ -648,6 +648,12 @@ ul{
        object-fit: cover;
 }
 
+.single-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .single-header{
     display: flex;
     flex-direction: column;
@@ -714,7 +720,7 @@ ul{
     .wrapper-single{
         flex-direction: row;
     }
-    .post-single{
+    .single-content{
         width: 72%;
     }
     .single-header{
@@ -785,6 +791,8 @@ ul{
                     color: #000;
                     font-family: 'Lancelot', 'cursive';
                     font-weight: bold;
+                    font-size: 1.2rem;
+                    transition: all 0.5s;
                 }
 
 @media only screen and (min-width: 1020px){
@@ -796,6 +804,9 @@ ul{
                     color:#c7a770;
                 }
                     .widget-area-single .widget_categories .wp-block-categories-list .cat-item a:hover{
+                        color:#c7a770;
+                    }
+                    .widget-area-single .widget_recent_entries .wp-block-latest-posts__list li a:hover{
                         color:#c7a770;
                     }
 }

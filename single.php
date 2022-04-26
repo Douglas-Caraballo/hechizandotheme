@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main wrapper-single">
 		<?php
 			get_template_part('template-parts/content-single');
 		?>
