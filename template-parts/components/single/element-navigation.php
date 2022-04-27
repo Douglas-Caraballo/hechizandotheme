@@ -4,17 +4,17 @@
     //Get Previous Adjacent Post
     $previous_post = get_adjacent_post();
 ?>
-<div>
+<nav class="navigation-post-single">
     <?php if (!empty($next_post)) : ?>
-        <div>
-            <h4><?php _e('Next Article', 'hechizandotheme'); ?></h4>;
+        <div class="navigation-article">
+            <h4><?php _e('Next Article', 'hechizandotheme'); ?></h4>
             <?php navigation_post_thumb_and_title($next_post->ID); ?>
         </div>
     <?php endif; ?>
     <?php if(!empty($previous_post)) : ?>
-        <div>
+        <div class="navigation-article">
             <h4><?php _e('Previous Article', 'hechizandotheme'); ?></h4>
             <?php navigation_post_thumb_and_title($previous_post->ID); ?>
         </div>
     <?php endif; ?>
-</div>
+</nav>

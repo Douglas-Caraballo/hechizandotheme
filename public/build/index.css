@@ -811,6 +811,51 @@ ul{
                     }
 }
 
+.navigation-post-single{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.navigation-article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+}
+
+.navigation-article h4{
+        text-align: center;
+        font-family: 'Lancelot', 'cursive';
+        font-size: 1.3rem;
+    }
+
+.post-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.navigation-thumb{
+    width: 100%;
+    height: 8rem;
+}
+
+.navigation-thumb__img{
+        width: 100%;
+        height:100%;
+        -o-object-fit:cover;
+           object-fit:cover;
+    }
+
+.navigation-post-title{
+    font-family: 'Lancelot', 'cursive';
+    color: #000;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
 .lower-bar{
     display: flex;
     justify-content: space-around;

@@ -7,7 +7,7 @@ function navigation_post_thumb_and_title($post_id){ ?>
             if(!empty($page_thumb[0])):
         ?>
         <a href="<?php echo get_the_permalink($post_id);?>" class="navigation-thumb">
-            <img src="<?php echo $page_thumb[0];?>"/>
+            <img class="navigation-thumb__img" src="<?php echo $page_thumb[0];?>"/>
         </a>
         <?php
             endif;

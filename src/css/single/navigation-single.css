@@ -1,0 +1,37 @@
+.navigation-post-single{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+.navigation-article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    h4{
+        text-align: center;
+        font-family: 'Lancelot', 'cursive';
+        font-size: 1.3rem;
+    }
+}
+.post-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.navigation-thumb{
+    width: 100%;
+    height: 8rem;
+    &__img{
+        width: 100%;
+        height:100%;
+        object-fit:cover;
+    }
+}
+.navigation-post-title{
+    font-family: 'Lancelot', 'cursive';
+    color: #000;
+    text-align: center;
+    font-size: 1.1rem;
+}
