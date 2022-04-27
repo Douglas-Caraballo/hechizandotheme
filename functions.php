@@ -210,4 +210,4 @@ require get_template_directory(). '/inc/endpoint.php';
  * Register the function to display the navigation post with image
  */
 
-require get_template_directory(). '/ing/navigation-single-post.php';
+require get_template_directory(). '/inc/navigation-single-post.php';
