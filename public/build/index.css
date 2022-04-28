@@ -847,6 +847,7 @@ ul{
         height:100%;
         -o-object-fit:cover;
            object-fit:cover;
+        transition: all 0.7s;
     }
 
 .navigation-post-title{
@@ -854,6 +855,17 @@ ul{
     color: #000;
     text-align: center;
     font-size: 1.1rem;
+    transition: all 0.7s;
+}
+
+@media only screen and (min-width: 1020px){
+        .post-nav:hover .navigation-post-title{
+            color: rgb(115,61,145);
+            font-size: 1.3rem;
+        }
+            .post-nav:hover .navigation-thumb__img{
+                filter: brightness(50%);
+            }
 }
 
 .lower-bar{
