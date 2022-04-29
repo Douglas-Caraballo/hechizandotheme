@@ -1,0 +1,116 @@
+.wrapper-content{
+    p{
+        font-family: 'Crimson Pro', serif;
+        font-size:1.2rem;
+    }
+    a{
+        color: #000;
+        font-style: italic;
+        font-weight: bold;
+    }
+    ol{
+        padding-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    ul{
+        padding-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        list-style-type: circle;
+    }
+}
+.wp-block-pullquote{
+    blockquote{
+        p{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        cite{
+            font-size: 0.75rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+}
+.wp-block-code{
+    color: rgb(115,61,145);
+    padding: 0.5rem;
+    border: 1px rgb(115,61,145) solid;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.wp-block-table{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    .has-fixed-layout{
+        thead{
+            background-color: rgba(115,61,145,0.5);
+            font-style:italic;
+            font-weight: bold;
+            th{
+                padding: 0.5rem 0;
+            }
+        }
+        tbody{
+            td{
+                padding: 0.5rem 0;
+            }
+        }
+    }
+    figcaption{
+        font-size: 0.75rem;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+.wp-block-quote{
+    font-weight: bold;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cite{
+        font-size: 0.75rem;
+    }
+}
+.wp-block-verse{
+    font-weight: bold;
+    font-style: italic;
+}
+.wp-block-media-text{
+    gap: 1rem;
+    margin: 1rem 0;
+    &__media{
+        box-shadow: 0.5rem 1rem 1rem rgba(0,0,0,0.3);
+    }
+    &__content{
+        padding: 0 4%;
+        .has-large-font-size{
+            font-weight: bold;
+        }
+    }
+}
+.wp-block-embed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    figcaption{
+        font-size: 0.75rem;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+.wp-block-embed-youtube{
+    .wp-block-embed__wrapper{
+        width: 100%;
+        iframe{
+            width: 100%;
+        }
+    }
+}

@@ -149,6 +149,7 @@ function hechizandotheme_scripts() {
 	wp_enqueue_style('miestilo', get_template_directory_uri().'/public/build/index.css',array(),'1.0.0');
 	wp_enqueue_style('limelight_google_fonts', "https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 	wp_enqueue_style('lancelot_google_fonts', "https://fonts.googleapis.com/css2?family=Lancelot&display=swap");
+	wp_enqueue_style('crimson_google_fonts', "https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,400;1,200;1,400&display=swap");
 
 	wp_localize_script( 'tema-script','requestListPostVar', array(
 		'url' => rest_url('post/posts'),
