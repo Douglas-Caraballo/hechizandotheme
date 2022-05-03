@@ -1002,80 +1002,107 @@ ul{
     padding: 2rem;
 }
 
-.comment-list{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.comment-list .comment{
+.comments-area .comment-list{
+        list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
 
-.comment-list .comment .comment-body{
+.comments-area .comment-list .comment{
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
 
-.comment-list .comment .comment-body .comment-meta{
+.comments-area .comment-list .comment .comment-body{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                gap: 0.5rem;
             }
 
-.comment-list .comment .comment-body .comment-meta .comment-author{
+.comments-area .comment-list .comment .comment-body .comment-meta{
                     display: flex;
-                    gap: 1rem;
-                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
 
-.comment-list .comment .comment-body .comment-meta .comment-author .avatar{
-                        border-radius: 9999px;
+.comments-area .comment-list .comment .comment-body .comment-meta .comment-author{
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
                     }
 
-.comment-list .comment .comment-body .comment-meta .comment-author .fn .url{
-                            color: #000;
+.comments-area .comment-list .comment .comment-body .comment-meta .comment-author .avatar{
+                            border-radius: 9999px;
                         }
 
-.comment-list .comment .comment-body .comment-meta .comment-author .says{
-                        display: none;
-                    }
+.comments-area .comment-list .comment .comment-body .comment-meta .comment-author .fn .url{
+                                color: #000;
+                            }
 
-.comment-list .comment .comment-body .comment-meta .comment-metadata a{
-                        color: #000;
-                        font-size: 0.75rem;
-                        font-weight: bold;
-                        font-style: italic;
-                    }
+.comments-area .comment-list .comment .comment-body .comment-meta .comment-author .says{
+                            display: none;
+                        }
 
-.comment-list .comment .comment-body .reply{
-                display: flex;
-                gap: 0.3rem;
-                align-items: center;
-            }
+.comments-area .comment-list .comment .comment-body .comment-meta .comment-metadata a{
+                            color: #000;
+                            font-size: 0.75rem;
+                            font-weight: bold;
+                            font-style: italic;
+                            transition:all 0.5s;
+                        }
 
-.comment-list .comment .comment-body .reply .comment-reply-link{
-                    color: #000;
-                    font-size:0.8rem;
+.comments-area .comment-list .comment .comment-body .reply{
+                    display: flex;
+                    gap: 0.3rem;
+                    align-items: center;
+                    transition: all 0.5s;
                 }
 
-.comment-list .comment .comment-body .reply::after{
-                content: "\2193";
+.comments-area .comment-list .comment .comment-body .reply .comment-reply-link{
+                        color: #000;
+                        font-size:0.8rem;
+                        transition:all 0.5s;
+                    }
+
+.comments-area .comment-list .comment .comment-body .reply::after{
+                    content: "\2193";
+                }
+
+.comments-area .comment-list .comment .children{
+                list-style-type: none;
+                padding-left: 0.8rem;
             }
 
-.comment-list .comment .children{
-            list-style-type: none;
-            padding-left: 0.8rem;
+.comments-area .comment-respond{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+.comments-area .comment-respond .comment-form{
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
         }
 
 @media only screen and (min-width: 1020px){
-                .comment-list .comment .comment-body .comment-meta{
-                    flex-direction: row;
-                }
+                    .comments-area .comment-list .comment .comment-body .comment-meta{
+                        flex-direction: row;
+                    }
+                            .comments-area .comment-list .comment .comment-body .comment-meta .comment-metadata:hover a{
+                                color:rgb(115,61,145);
+                            }
+                    .comments-area .comment-list .comment .comment-body .reply:hover{
+                        color:rgb(115,61,145);
+                    }
+                        .comments-area .comment-list .comment .comment-body .reply:hover .comment-reply-link{
+                            color: rgb(115,61,145);
+                        }
+        .comments-area .comment-respond{
+        
+        }
 }
 
 .lower-bar{

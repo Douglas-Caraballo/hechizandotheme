@@ -3,77 +3,106 @@
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
-}
-.comment-list{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    .comment{
+    .comment-list{
+        list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        .comment-body{
+        gap: 1.5rem;
+        .comment{
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            .comment-meta{
+            .comment-body{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                .comment-author{
+                gap: 0.5rem;
+                .comment-meta{
                     display: flex;
-                    gap: 1rem;
-                    align-items: center;
-                    .avatar{
-                        border-radius: 9999px;
-                    }
-                    .fn{
-                        .url{
-                            color: #000;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .comment-author{
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        .avatar{
+                            border-radius: 9999px;
+                        }
+                        .fn{
+                            .url{
+                                color: #000;
+                            }
+                        }
+                        .says{
+                            display: none;
                         }
                     }
-                    .says{
-                        display: none;
+                    .comment-metadata{
+                        a{
+                            color: #000;
+                            font-size: 0.75rem;
+                            font-weight: bold;
+                            font-style: italic;
+                            transition:all 0.5s;
+                        }
                     }
                 }
-                .comment-metadata{
-                    a{
+                .reply{
+                    display: flex;
+                    gap: 0.3rem;
+                    align-items: center;
+                    transition: all 0.5s;
+                    .comment-reply-link{
                         color: #000;
-                        font-size: 0.75rem;
-                        font-weight: bold;
-                        font-style: italic;
+                        font-size:0.8rem;
+                        transition:all 0.5s;
                     }
                 }
-            }
-            .reply{
-                display: flex;
-                gap: 0.3rem;
-                align-items: center;
-                .comment-reply-link{
-                    color: #000;
-                    font-size:0.8rem;
+                .reply::after{
+                    content: "\2193";
                 }
             }
-            .reply::after{
-                content: "\2193";
+            .children{
+                list-style-type: none;
+                padding-left: 0.8rem;
             }
         }
-        .children{
-            list-style-type: none;
-            padding-left: 0.8rem;
+    }
+    .comment-respond{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .comment-form{
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
         }
     }
 }
 
 @media only screen and (min-width: 1020px){
-    .comment-list{
-        .comment{
-            .comment-body{
-                .comment-meta{
-                    flex-direction: row;
+    .comments-area{
+        .comment-list{
+            .comment{
+                .comment-body{
+                    .comment-meta{
+                        flex-direction: row;
+                        .comment-metadata:hover{
+                            a{
+                                color:rgb(115,61,145);
+                            }
+                        }
+                    }
+                    .reply:hover{
+                        color:rgb(115,61,145);
+                        .comment-reply-link{
+                            color: rgb(115,61,145);
+                        }
+                    }
                 }
             }
+        }
+        .comment-respond{
+        
         }
     }
 }
