@@ -8,10 +8,17 @@ function closeSearch(){
     document.body.classList.toggle('scroll-desactivate');
 }
 
-document.querySelector('.open-btn').addEventListener( 'click',()=>{
-    openSearch();
-});
+let openBtn = document.querySelector('.open-btn');
+let closeBtn = document.querySelector('.overlay__close-btn');
 
-document.querySelector('.overlay__close-btn').addEventListener('click', ()=>{
-    closeSearch();
-});
+if(openBtn){
+    openBtn.addEventListener( 'click',()=>{
+        openSearch();
+    });
+}
+
+if(closeBtn){
+    closeBtn.addEventListener('click', ()=>{
+        closeSearch();
+    });
+}

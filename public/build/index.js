@@ -15,7 +15,7 @@
   \*************************************/
 /***/ (() => {
 
-eval("function openSearch(){\n    document.getElementById(\"my-search\").style.display=\"block\";\n    document.body.classList.toggle('scroll-desactivate');\n}\n\nfunction closeSearch(){\n    document.getElementById(\"my-search\").style.display=\"none\";\n    document.body.classList.toggle('scroll-desactivate');\n}\n\ndocument.querySelector('.open-btn').addEventListener( 'click',()=>{\n    openSearch();\n});\n\ndocument.querySelector('.overlay__close-btn').addEventListener('click', ()=>{\n    closeSearch();\n});\n\n\n//# sourceURL=webpack://underscores/./src/js/fullscreen-search.js?");
+eval("function openSearch(){\n    document.getElementById(\"my-search\").style.display=\"block\";\n    document.body.classList.toggle('scroll-desactivate');\n}\n\nfunction closeSearch(){\n    document.getElementById(\"my-search\").style.display=\"none\";\n    document.body.classList.toggle('scroll-desactivate');\n}\n\nlet openBtn = document.querySelector('.open-btn');\nlet closeBtn = document.querySelector('.overlay__close-btn');\n\nif(openBtn){\n    openBtn.addEventListener( 'click',()=>{\n        openSearch();\n    });\n}\n\nif(closeBtn){\n    closeBtn.addEventListener('click', ()=>{\n        closeSearch();\n    });\n}\n\n\n//# sourceURL=webpack://underscores/./src/js/fullscreen-search.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("function openSearch(){\n    document.getElementById(\"my-search\").style.d
   \*****************************/
 /***/ (() => {
 
-eval("const hamburger =document.querySelector('#hamburger'),\n    menu = document.querySelector('#menu'),\n    close = document.querySelector('#close');\n\nhamburger.addEventListener('click', (e)=>{\n    menu.classList.toggle('aside-activate');\n});\n\nclose.addEventListener('click', (e)=>{\n    menu.classList.toggle('aside-activate');\n});\n\n//# sourceURL=webpack://underscores/./src/js/hamburger.js?");
+eval("const hamburger =document.querySelector('#hamburger'),\n    menu = document.querySelector('#menu'),\n    close = document.querySelector('#close');\n\nif(hamburger){\n\n    hamburger.addEventListener('click', (e)=>{\n        menu.classList.toggle('aside-activate');\n    });\n    \n    close.addEventListener('click', (e)=>{\n        menu.classList.toggle('aside-activate');\n    });\n}\n\n//# sourceURL=webpack://underscores/./src/js/hamburger.js?");
 
 /***/ }),
 
