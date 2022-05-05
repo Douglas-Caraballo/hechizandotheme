@@ -1117,11 +1117,22 @@ ul{
             gap:1rem;
         }
 
+.comments-area .comment-respond .comment-form label{
+                font-weight: bold;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+            }
+
 .comments-area .comment-respond .comment-form .comment-form-comment{
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
             }
+
+.comments-area .comment-respond .comment-form .comment-form-comment textarea{
+                    border:2px solid #c7a770;
+                    font-size: 1rem;
+                }
 
 .comments-area .comment-respond .comment-form .comment-form-author{
                 display: flex;
@@ -1129,17 +1140,49 @@ ul{
                 gap: 0.5rem;
             }
 
+.comments-area .comment-respond .comment-form .comment-form-author input{
+                    border:2px solid #c7a770;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                }
+
 .comments-area .comment-respond .comment-form .comment-form-email{
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
             }
 
+.comments-area .comment-respond .comment-form .comment-form-email input{
+                    border:2px solid #c7a770;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                }
+
 .comments-area .comment-respond .comment-form .comment-form-url{
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
             }
+
+.comments-area .comment-respond .comment-form .comment-form-url input{
+                    border:2px solid #c7a770;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                }
+
+.comments-area .comment-respond .comment-form .comment-form-cookies-consent label{
+                    font-weight: lighter;
+                }
+
+.comments-area .comment-respond .comment-form .form-submit .submit{
+                    border:none;
+                    font-size:0.9rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    background: #fff;
+                    text-transform: uppercase;
+                    border:2px solid #c7a770;
+                }
 
 @media only screen and (min-width: 1020px){
                     .comments-area .comment-list .comment .comment-body .comment-meta{
@@ -1154,9 +1197,22 @@ ul{
                         .comments-area .comment-list .comment .comment-body .reply:hover .comment-reply-link{
                             color: rgb(115,61,145);
                         }
-        .comments-area .comment-respond{
-        
-        }
+            .comments-area .comment-respond .comment-form{
+                flex-direction: row;
+                flex-wrap:wrap;
+            }
+                .comments-area .comment-respond .comment-form .comment-form-comment{
+                    width: 100%;
+                }
+                .comments-area .comment-respond .comment-form .comment-form-author{
+                    width: 32%;
+                }
+                .comments-area .comment-respond .comment-form .comment-form-email{
+                    width: 32%;
+                }
+                .comments-area .comment-respond .comment-form .comment-form-url{
+                    width: 32%;
+                }
 }
 
 .widget-area-footer{
