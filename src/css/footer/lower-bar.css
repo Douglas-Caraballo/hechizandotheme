@@ -9,6 +9,7 @@
     text-align: center;
 }
 .site-footer{
+    margin-top: 2rem;
     .social-list{
         display: flex;
         gap: 1rem;

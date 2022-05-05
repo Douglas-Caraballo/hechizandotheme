@@ -533,6 +533,7 @@ ul{
     transition: all 0.5s;
     -webkit-animation: bounce 2s infinite;
             animation: bounce 2s infinite;
+    border-radius: 0.5rem;
 }
 
 .btn-more::after{
@@ -1289,6 +1290,10 @@ ul{
     color: #F0E9D2;
     padding: 0.5rem;
     text-align: center;
+}
+
+.site-footer{
+    margin-top: 2rem;
 }
 
 .site-footer .social-list{
