@@ -531,6 +531,12 @@ ul{
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.5s;
+    -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+}
+
+.btn-more::after{
+    content: "\2193";
 }
 
 @media only screen and (min-width: 1020px){
@@ -567,6 +573,24 @@ ul{
     .btn-more:hover{
         padding: 1rem 1.5rem;
         color: #c7a770;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+    }
+    50% {
+        transform: translateY(0);
     }
 }
 
@@ -1135,6 +1159,71 @@ ul{
         }
 }
 
+.widget-area-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgb(115,61,145);
+}
+
+.widget-area-footer .wp-block-image{
+        height: 6rem;
+        border-radius: 0.25rem;
+        padding: 4px;
+        background: #fff;
+    }
+
+.widget-area-footer .wp-block-gallery.has-nested-images{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+.widget-area-footer .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image){
+    width: 100%;
+}
+
+.widget-area-footer .categories-image-widget__wrapper__item__image{
+    padding: 4px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.widget-area-footer .categories-image-widget__wrapper__item span > a{
+    color: white;
+    font-weight: bold;
+}
+
+.widget-area-footer .wp-block-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 1rem;
+    width: 22rem;
+}
+
+.widget-area-footer .wp-block-tag-cloud a{
+    color: white;
+}
+
+.widget-area-footer .tag-cloud-link {
+    padding: 0.25rem;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+@media only screen and (min-width: 1020px){
+    .widget-area-footer{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+}
+
 .lower-bar{
     display: flex;
     flex-direction: column;
@@ -1150,7 +1239,7 @@ ul{
         display: flex;
         gap: 1rem;
         padding: 0.5rem;
-        justify-content: end;
+        justify-content: flex-end;
     }
 
 .site-footer .social a{

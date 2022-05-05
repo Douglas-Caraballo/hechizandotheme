@@ -85,6 +85,10 @@
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.5s;
+    animation: bounce 2s infinite;
+}
+.btn-more::after{
+    content: "\2193";
 }
 
 @media only screen and (min-width: 1020px){
@@ -123,5 +127,14 @@
     .btn-more:hover{
         padding: 1rem 1.5rem;
         color: #c7a770;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+    }
+    50% {
+        transform: translateY(0);
     }
 }
