@@ -1081,11 +1081,41 @@ ul{
         gap: 1rem;
     }
 
+.comments-area .comment-respond .comment-reply-title{
+            display: flex;
+            flex-direction:column;
+            gap: 0.5rem;
+        }
+
 .comments-area .comment-respond .comment-form{
             display: flex;
             flex-direction: column;
             gap:1rem;
         }
+
+.comments-area .comment-respond .comment-form .comment-form-comment{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+.comments-area .comment-respond .comment-form .comment-form-author{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+.comments-area .comment-respond .comment-form .comment-form-email{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+.comments-area .comment-respond .comment-form .comment-form-url{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
 
 @media only screen and (min-width: 1020px){
                     .comments-area .comment-list .comment .comment-body .comment-meta{
