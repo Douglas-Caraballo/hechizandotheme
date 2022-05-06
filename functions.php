@@ -210,5 +210,9 @@ require get_template_directory(). '/inc/endpoint.php';
 /**
  * Register the function to display the navigation post with image
  */
-
 require get_template_directory(). '/inc/navigation-single-post.php';
+
+/**
+ * Register the funtion to pagination the archive
+ */
+require get_template_directory(). '/inc/pagination.php';
