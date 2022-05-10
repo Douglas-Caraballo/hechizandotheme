@@ -66,3 +66,20 @@ function has_already_voted($post_id){
     }
     return false;
 }
+
+function get_post_like_link($post_id){
+    $themename = "hechizandotheme";
+
+    $vote_count = get_post_meta($post_id, "votes_count", true);
+
+    $output = '<p class="post-like">';
+    if(has_already_voted($post_id))
+        $output .= ' <span title="'.__('I like this article', $themename).'" class="like alreadyvoted"></span>';
+    else
+        $output .= '<a href="#" data-post_id="'.$post_id.'">
+                    <span  title="'.__('I like this article', $themename).'"class="like"></span>
+                </a>';
+    $output .= '<span class="count">'.$vote_count.'</span></p>';
+
+    return $output;
+}

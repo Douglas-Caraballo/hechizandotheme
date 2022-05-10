@@ -15,6 +15,7 @@
                 <span class="single-header__details__info__comments"><h5><a href="<?= comments_link();?>"><?php echo get_comments_number(get_the_ID()) . ' comments' ?></a></h5></span>
                 <span><h5><?php the_author(); ?></h5></span>
                 <span><h5><?php echo($post_views).' views';?></h5></span>
+                <span><h5><?php echo get_post_like_link(get_the_ID()); ?></h5></span>
             </div>
         </div>
         <figure class="single-header__figure">

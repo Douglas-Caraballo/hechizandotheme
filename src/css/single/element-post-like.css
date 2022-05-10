@@ -1,0 +1,8 @@
+.like::after{
+    content: "\2661";
+    transition: all 0.5s;
+}
+
+.voted::after{
+    color: red;
+}
