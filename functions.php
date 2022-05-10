@@ -216,3 +216,21 @@ require get_template_directory(). '/inc/navigation-single-post.php';
  * Register the funtion to pagination the archive
  */
 require get_template_directory(). '/inc/pagination.php';
+
+//------------------ Functions post likes -----------------------//
+
+add_action('wp_ajax_nopriv_post-like', 'post_like');
+add_action('wp_ajax_post-like', 'post_like');
+
+wp_enqueue_script('like_post', get_template_directory_uri().'/src/js/post-like.js', array('jquery'),'1.0',true);
+wp_localize_script( 'like_post', 'ajax_var', array(
+	'url' => admin_url('admin-ajax.php'),
+	'nonce' => wp_create_nonce('ajax-nonce')
+));
+
+/**
+ * Register the function count like
+ */
+require get_template_directory(). '/inc/post-like.php';
+
+//------------------ End functions post likes--------------------//
