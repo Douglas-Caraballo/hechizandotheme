@@ -712,6 +712,7 @@ ul{
             gap: 1rem;
             text-transform: uppercase;
             font-size: 0.7rem;
+            align-items: center;
         }
 
 .single-header__details__info__comments a{
@@ -1216,13 +1217,18 @@ ul{
                 }
 }
 
+.post-like{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+}
+
 .like::after{
     content: "\2661";
     transition: all 0.5s;
-}
-
-.voted::after{
-    color: red;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .archive-wrapper{
