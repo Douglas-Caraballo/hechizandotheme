@@ -41,6 +41,7 @@ $taxonomie = ['category'];
                             <span><h5 class="post-date"><?php echo get_the_date('M d, Y');?></h5></span>
                             <span><h5 class="post-author"><?php the_author(); ?></h5></span>
                             <span><h5 class="post-views"><?php echo ($postVews); ?> views </h5></span>
+                            <span><h5> <?php echo get_post_like_link(get_the_ID($homeQuery->id));?></h5></span>
                         </div>
                         <div class="content-post__item__info__excerpt">
                             <?php the_excerpt(); ?>
