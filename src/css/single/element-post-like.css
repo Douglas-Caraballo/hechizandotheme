@@ -4,9 +4,30 @@
     gap: 0.3rem;
 
 }
+.like{
+    color:  rgb(115,61,145);
+}
 .like::after{
-    content: "\2661";
+    content: "\2665";
     transition: all 0.5s;
     font-size: 1rem;
     font-weight: bold;
+}
+.voted{
+    animation: heard 1.5s;
+}
+
+@keyframes heard{
+    10%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+        transform: translateY(-25%);
+    }
+
+    100%{
+            transform: translateY(0%);
+    }
 }

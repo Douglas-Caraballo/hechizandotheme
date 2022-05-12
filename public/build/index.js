@@ -25,7 +25,7 @@ eval("function openSearch(){\n    document.getElementById(\"my-search\").style.d
   \*****************************/
 /***/ (() => {
 
-eval("const hamburger =document.querySelector('#hamburger'),\n    menu = document.querySelector('#menu'),\n    close = document.querySelector('#close');\n\nif(hamburger){\n\n    hamburger.addEventListener('click', (e)=>{\n        menu.classList.toggle('aside-activate');\n    });\n    \n    close.addEventListener('click', (e)=>{\n        menu.classList.toggle('aside-activate');\n    });\n}\n\n//# sourceURL=webpack://underscores/./src/js/hamburger.js?");
+eval("const hamburger =document.querySelector('#hamburger'),\n    menu = document.querySelector('#menu'),\n    close = document.querySelector('#close');\n\nif(hamburger){\n\n    hamburger.addEventListener('click', (e)=>{\n        menu.classList.toggle('aside-activate');\n    });\n    close.addEventListener('click', (e)=>{\n        menu.classList.toggle('aside-activate');\n    });\n}\n\n//# sourceURL=webpack://underscores/./src/js/hamburger.js?");
 
 /***/ }),
 
