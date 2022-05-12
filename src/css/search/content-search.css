@@ -1,0 +1,79 @@
+.search-item{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    padding: 2rem;
+    .entry-title{
+        font-family: 'Lancelot', 'cursive';
+        a{
+            font-size: 1.7rem;
+        }
+    }
+    .entry-meta{
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Lancelot', 'cursive';
+        display: flex;
+        gap: 0.3rem;
+        .byline{
+            display: flex;
+            gap: 0.3rem;
+            .author{
+                display: flex;
+                gap: 0.3rem;
+                align-items: center;
+                .url{
+                    color: #000;
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    transition: all 0.5s;
+                }
+            }
+            .author::before{
+                content: url('https://i.postimg.cc/QtXK9SpY/usuario-1.png');
+            }
+        }
+    }
+    .entry-header{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .search-post{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+.wrapper-search{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.entry-summary{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media only screen and (min-width: 1020px){
+    .search-item{
+        .entry-meta{
+            .byline{
+                .author{
+                    .url:hover{
+                        color: #c7a770;
+                    }
+                }
+            }
+        }
+        .search-post{
+            flex-direction: row;
+            .entry-summary{
+                width: 50%;
+            }
+        }
+    }
+}

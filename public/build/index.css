@@ -1397,6 +1397,89 @@ ul{
                 }
 }
 
+.search-item{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    padding: 2rem;
+}
+
+.search-item .entry-title{
+        font-family: 'Lancelot', 'cursive';
+    }
+
+.search-item .entry-title a{
+            font-size: 1.7rem;
+        }
+
+.search-item .entry-meta{
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Lancelot', 'cursive';
+        display: flex;
+        gap: 0.3rem;
+    }
+
+.search-item .entry-meta .byline{
+            display: flex;
+            gap: 0.3rem;
+        }
+
+.search-item .entry-meta .byline .author{
+                display: flex;
+                gap: 0.3rem;
+                align-items: center;
+            }
+
+.search-item .entry-meta .byline .author .url{
+                    color: #000;
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    transition: all 0.5s;
+                }
+
+.search-item .entry-meta .byline .author::before{
+                content: url('https://i.postimg.cc/QtXK9SpY/usuario-1.png');
+            }
+
+.search-item .entry-header{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+.search-item .search-post{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+.wrapper-search{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.entry-summary{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media only screen and (min-width: 1020px){
+                    .search-item .entry-meta .byline .author .url:hover{
+                        color: #c7a770;
+                    }
+        .search-item .search-post{
+            flex-direction: row;
+        }
+            .search-item .search-post .entry-summary{
+                width: 50%;
+            }
+}
+
 .widget-area-footer{
     display: flex;
     flex-direction: column;
