@@ -18,6 +18,12 @@
         font-family: 'Limelight', 'cursive';
     }
 }
+
+.featured-item__info__redirect > a:hover {
+    border: 2px solid white;
+    padding: 0.5rem;
+}
+
 .wrapper-category-img{
     width: 10rem;
     height: 8rem;
@@ -41,7 +47,7 @@
     .category-item{
         width: 25%;
         &__name{
-            left: 8rem;
+            left: 10.5rem;
         }
     }
 }

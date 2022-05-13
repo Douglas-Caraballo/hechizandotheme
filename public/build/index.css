@@ -396,6 +396,11 @@ ul{
         font-family: 'Limelight', 'cursive';
     }
 
+.featured-item__info__redirect > a:hover {
+    border: 2px solid white;
+    padding: 0.5rem;
+}
+
 .wrapper-category-img{
     width: 10rem;
     height: 8rem;
@@ -422,7 +427,7 @@ ul{
         width: 25%;
     }
         .category-item__name{
-            left: 8rem;
+            left: 10.5rem;
         }
 }
 
@@ -472,7 +477,8 @@ ul{
 
 .content-post__item__info__details h5{
                     font-size: 0.9rem;
-                    font-weight: bolder;
+                    font-weight: bold;
+                    padding: 0.1rem;
                 }
 
 .content-post__item__info__excerpt{
@@ -506,16 +512,21 @@ ul{
 
 .see-more-redirect{
     color: #000;
-    background-color: rgba(115,61,145,0.4);
+    background-color: #C7A770;
     padding: 0.5rem;
+    border-radius: 0.25rem;
     box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.2);
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     font-weight: bold;
     font-size: 0.8rem;
-    transition: all 0.7s;
+    transition: all 0.5s;
 }
+
+.see-more-redirect:hover{
+        transform: scale(1.1);
+    }
 
 .section-button{
     display: flex;
@@ -552,6 +563,8 @@ ul{
         .content-post__item{
             flex-direction: row;
             gap: 3rem;
+            justify-content: space-around;
+            padding: 0.5rem;
         }
             .content-post__item__img{
                 width: 25rem;
@@ -564,14 +577,13 @@ ul{
                 .content-post__item__info__details{
                     justify-content: start;
                 }
+    .content-post__item:nth-child(2n){
+        flex-direction: row-reverse;
+    }
     .post-title{
         text-align: start;
     }
-    .see-more-redirect:hover{
-        transform: scale(1.1);
-        background-color: rgba(115,61,145,0.7);
-    }
-    .btn-more:hover{
+.btn-more:hover{
         padding: 1rem 1.5rem;
         color: #c7a770;
     }
@@ -602,9 +614,52 @@ ul{
     padding: 0 0.5rem;
 }
 
+.widget-area-home .widget_block h2{
+        display: flex;
+        border: 1px solid #C7A770;
+        border-top-color: rgb(199, 167, 112);
+        padding: 0.7rem;
+        position: relative;
+        border-top-color: #C7A770;
+    }
+
+.widget-area-home .widget_block h2::after {
+        top: 100%;
+        left: 30px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #fff;
+        border-width: 6px;
+        margin-left: -6px;
+        }
+
+.widget-area-home .widget_block h2::before {
+            top: 100%;
+            left: 30px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(51, 51, 51, 0);
+            border-width: 9px;
+            margin-left: -9px;
+            border-top-color: #dbc0ad;
+        }
+
 .widget-area-home a{
         color: #000;
         transition: all 0.5s;
+    }
+
+.widget-area-home .widget_recent_entries{
+        padding: 0.5rem;
     }
 
 .widget-area-home .widget_recent_entries .wp-block-latest-posts__list{
@@ -636,6 +691,8 @@ ul{
         height: 100%;
         z-index: 1;
         top:1rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        padding: 0.5rem;
     }
         .wrapper-home-widgets a:hover{
             color: #c7a770;
@@ -1403,7 +1460,7 @@ ul{
     .widget-area-footer{
         display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     }
 
 }
