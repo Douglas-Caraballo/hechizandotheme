@@ -1428,7 +1428,6 @@ ul{
 .search-item .entry-meta .byline .author{
                 display: flex;
                 gap: 0.3rem;
-                align-items: center;
             }
 
 .search-item .entry-meta .byline .author .url{

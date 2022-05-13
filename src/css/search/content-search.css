@@ -21,7 +21,6 @@
             .author{
                 display: flex;
                 gap: 0.3rem;
-                align-items: center;
                 .url{
                     color: #000;
                     font-style: italic;

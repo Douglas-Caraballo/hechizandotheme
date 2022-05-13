@@ -21,7 +21,7 @@
 
         <div class="entry-summary">
             <?php the_excerpt(); ?>
-            <a class="archive-item__info__archive-link" href="<?= esc_url(get_permalink()); ?>">Leer</a>
+            <a class="archive-item__info__archive-link" href="<?= esc_url(get_permalink()); ?>">Leer &rarr;</a>
         </div>
     </div>
 
