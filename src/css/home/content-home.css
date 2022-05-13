@@ -33,7 +33,8 @@
                 font-family: 'Lancelot', 'cursive';
                 h5{
                     font-size: 0.9rem;
-                    font-weight: bolder;
+                    font-weight: bold;
+                    padding: 0.1rem;
                 }
             }
             &__excerpt{
@@ -64,14 +65,19 @@
 }
 .see-more-redirect{
     color: #000;
-    background-color: rgba(115,61,145,0.4);
+    background-color: #C7A770;
     padding: 0.5rem;
+    border-radius: 0.25rem;
     box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.2);
     width: max-content;
     font-weight: bold;
     font-size: 0.8rem;
-    transition: all 0.7s;
+    transition: all 0.5s;
 }
+.see-more-redirect:hover{
+        transform: scale(1.1);
+    }
+
 .section-button{
     display: flex;
     justify-content: center;
@@ -92,6 +98,7 @@
     content: "\2193";
 }
 
+
 @media only screen and (min-width: 1020px){
     .home-content{
         flex-direction: row;
@@ -101,10 +108,13 @@
     .wrapper-post{
         width: 80%;
     }
+
     .content-post{
         &__item{
             flex-direction: row;
             gap: 3rem;
+            justify-content: space-around;
+            padding: 0.5rem;
             &__img{
                 width: 25rem;
                 height: 18rem;
@@ -118,14 +128,13 @@
             }
         }
     }
+    .content-post__item:nth-child(2n){
+        flex-direction: row-reverse;
+    }
     .post-title{
         text-align: start;
     }
-    .see-more-redirect:hover{
-        transform: scale(1.1);
-        background-color: rgba(115,61,145,0.7);
-    }
-    .btn-more:hover{
+.btn-more:hover{
         padding: 1rem 1.5rem;
         color: #c7a770;
     }
