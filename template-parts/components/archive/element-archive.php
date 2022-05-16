@@ -13,6 +13,6 @@
         <div class="archive-item__info__excerpt">
             <?php the_excerpt(); ?>
         </div>
-        <a class="archive-item__info__archive-link" href="<?= esc_url(get_permalink()); ?>">Leer</a>
+        <a class="archive-item__info__archive-link search-buton-link" href="<?= esc_url(get_permalink()); ?>">Leer &rarr;</a>
     </div>
 </article>
