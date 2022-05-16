@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     gap:1rem;
-    padding: 2rem;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.3rem;
     .entry-title{
         font-family: 'Lancelot', 'cursive';
         a{
@@ -42,13 +44,14 @@
     .search-post{
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
     }
 }
 .wrapper-search{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 0 2rem;
 }
 .entry-summary{
     text-align: justify;
@@ -56,7 +59,10 @@
     flex-direction: column;
     gap: 2rem;
 }
-
+.search-buton-link{
+    transition: all 0.5s;
+    border-radius: 0.3rem;
+}
 @media only screen and (min-width: 1020px){
     .search-item{
         .entry-meta{
@@ -71,8 +77,13 @@
         .search-post{
             flex-direction: row;
             .entry-summary{
-                width: 50%;
+                width: 60%;
             }
         }
+    }
+    .search-buton-link:hover{
+        padding: 0.5rem 1rem;
+        background-color: rgb(115,61,145);
+        color: #fff;
     }
 }

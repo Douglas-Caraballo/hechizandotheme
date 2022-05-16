@@ -19,7 +19,7 @@
 	</h1>
 </header><!-- .page-header -->
 <div class="wrapper-content-archive">
-	<div>
+	<div class="archive-wrapper-item">
 		<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
