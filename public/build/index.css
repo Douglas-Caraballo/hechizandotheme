@@ -1409,6 +1409,15 @@ ul{
             gap:1rem;
         }
 
+.archive-item__info__detalist__author{
+                color: #000;
+                transition: all 0.5s;
+            }
+
+.archive-item__info__detalist__author:hover{
+                color: #c7a770;
+            }
+
 .archive-item__info__excerpt{
             text-align: justify;
         }
@@ -1468,9 +1477,10 @@ ul{
 @media only screen and (min-width: 1020px){
     .wrapper-content-archive{
         flex-direction: row;
+        gap: 3rem;
     }
     .archive-wrapper-item{
-        width: 80%;
+        width: 72%;
     }
     .wrapper-sidebar{
         width: 20%;
@@ -1551,7 +1561,7 @@ ul{
                 flex-direction: column;
                 gap:0.5rem;
                 font-family: 'Lancelot', 'cursive';
-                font-size:1.3rem;
+                font-size:1.4rem;
             }
 
 .wrapper-sidebar .widget-area .widget_categories .wp-block-categories .cat-item a{
@@ -1665,7 +1675,7 @@ ul{
     text-align: justify;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .search-buton-link{
@@ -1682,7 +1692,7 @@ ul{
         }
             .search-item .search-post__figure{
                 width: 35%;
-                height: 16rem;
+                height: 14rem;
             }
             .search-item .search-post .entry-summary{
                 width: 60%;

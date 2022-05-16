@@ -61,7 +61,7 @@
     text-align: justify;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 .search-buton-link{
     transition: all 0.5s;
@@ -82,7 +82,7 @@
             flex-direction: row;
             &__figure{
                 width: 35%;
-                height: 16rem;
+                height: 14rem;
             }
             .entry-summary{
                 width: 60%;

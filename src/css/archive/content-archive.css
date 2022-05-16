@@ -31,6 +31,13 @@
         &__detalist{
             display: flex;
             gap:1rem;
+            &__author{
+                color: #000;
+                transition: all 0.5s;
+            }
+            &__author:hover{
+                color: #c7a770;
+            }
         }
         &__excerpt{
             text-align: justify;
@@ -84,9 +91,10 @@
 @media only screen and (min-width: 1020px){
     .wrapper-content-archive{
         flex-direction: row;
+        gap: 3rem;
     }
     .archive-wrapper-item{
-        width: 80%;
+        width: 72%;
     }
     .wrapper-sidebar{
         width: 20%;
