@@ -9,6 +9,7 @@
         <div class= "archive-item__info__detalist">
             <span><h5><a class="archive-item__info__detalist__author" href="<?= esc_url( get_author_posts_url( get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a></h5></span>
             <span><h5><?php echo get_the_date('M d, Y'); ?></h5></span>
+            <span><h5><?php echo get_post_like_link(get_the_ID()); ?></h5></span>
         </div>
         <div class="archive-item__info__excerpt">
             <?php the_excerpt(); ?>

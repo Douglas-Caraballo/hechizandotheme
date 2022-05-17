@@ -234,3 +234,8 @@ wp_localize_script( 'like_post', 'ajax_var', array(
 require get_template_directory(). '/inc/post-like.php';
 
 //------------------ End functions post likes--------------------//
+
+/**
+ * Register the widgets
+ */
+require get_template_directory(). '/template-parts/widgets.php';

@@ -19,6 +19,7 @@
                     echo get_the_date('M d, Y');
                     hechizandotheme_posted_by();
                     ?>
+                    <span><h5><?php echo get_post_like_link(get_the_ID()); ?></h5></span>
                 </div>
                 <?php endif; ?>
                 </header>
