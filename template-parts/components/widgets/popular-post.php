@@ -33,29 +33,27 @@
                         ];
                         $the_query = new WP_Query( $args_post );
                     ?>
-                        <div>
+                        <ul class="popular-post">
                             <?php if( $the_query->have_posts() ) : ?>
                                 <?php while( $the_query->have_posts() ) :
                                     $the_query->the_post();
                                     $permalink = esc_url(get_the_permalink());
-                                    $thumbnail = get_the_post_thumbnail($post_id,'thumbnail',['class'=>'img-news']);
+                                    $thumbnail = get_the_post_thumbnail($post_id,'',['class'=>'img-popular-post']);
                                     $title= get_the_title();
                                     $date= get_the_date('M d, Y');
                                 ?>
-                                <div>
-                                    <a class="widget-item-list" href="<?= $permalink; ?>">
-                                        <div>
-                                            <?= $thumbnail;?>
-                                        </div>
-                                        <div>
-                                            <h3><?= $title;?></h3>
-                                            <h6><?= $date;?></h6>
-                                        </div>
-                                    </a>
-                                </div>
+                                <li class="popular-post__item">
+                                    <figure class="popular-post__item__figure">
+                                        <?= $thumbnail;?>
+                                    </figure>
+                                    <div class="popular-post__item__summary">
+                                        <h4><a class="widget-item-list" href="<?= $permalink; ?>"><?= $title;?></a></h4>
+                                        <h6><?= $date;?></h6>
+                                    </div>
+                                </li>
                                 <?php endwhile; ?>
                             <?php endif; ?>
-                        </div>
+                        </ul>
                     </div>
                     <?php
                     echo $args[ 'after_widget' ];
