@@ -34,6 +34,7 @@
             color:white;
             font-weight: bold;
             font-family: 'Limelight', 'cursive';
+            transition: all 0.5s;
         }
     }
 }

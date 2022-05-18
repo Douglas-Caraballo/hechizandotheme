@@ -305,6 +305,7 @@ ul{
             color:white;
             font-weight: bold;
             font-family: 'Limelight', 'cursive';
+            transition: all 0.5s;
         }
 
 .featured-img{
@@ -1448,6 +1449,10 @@ ul{
         gap: 0.5rem;
     }
 
+.archive-item__info .archive-title-post{
+            text-align: center;
+        }
+
 .archive-item__info__detalist{
             display: flex;
             gap:1rem;
@@ -1525,19 +1530,20 @@ ul{
     }
     .archive-wrapper-item{
         width: 72%;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .wrapper-sidebar{
         width: 22%;
     }
     .archive-item{
-        flex-direction: row;
+        width: 49%;
     }
         .archive-item__figure{
-            width: 35%;
             height: 13rem;
         }
         .archive-item__info{
-            width: 65%;
+            width: 100%;
         }
             .Navigation .NavigationList li:hover{
                 background: rgba(115,61,145,0.7);
