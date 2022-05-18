@@ -93,6 +93,8 @@
                     display: flex;
                     gap: 1rem;
                     align-items: center;
+                    font-family: 'Lancelot', 'cursive';
+                    font-size: 1.3rem;
                     &__figure{
                         width: 5rem;
                         height: 5rem;
@@ -110,6 +112,12 @@
                     }
                 }
             }
+        }
+    }
+    .categories-image-widget{
+        &__wrapper{
+            font-family: 'lancelot', 'cursive';
+            font-size:1.5rem;
         }
     }
 }

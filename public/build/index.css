@@ -719,6 +719,8 @@ ul{
                     display: flex;
                     gap: 1rem;
                     align-items: center;
+                    font-family: 'Lancelot', 'cursive';
+                    font-size: 1.3rem;
                 }
 
 .widget-area-home .widget_popular_post .see-popular .popular-post__item__figure{
@@ -739,6 +741,11 @@ ul{
                         flex-direction: column;
                         gap: 0.3rem;
                     }
+
+.widget-area-home .categories-image-widget__wrapper{
+            font-family: 'lancelot', 'cursive';
+            font-size:1.5rem;
+        }
 
 @media only screen and (min-width: 1020px){
     .wrapper-home-widgets{
