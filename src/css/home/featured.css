@@ -18,8 +18,8 @@
         position: absolute;
         width: 11rem;
         text-align: center;
-        top: 4rem;
-        left: 1rem;
+        top: 23%;
+        left: 9%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -27,14 +27,17 @@
         font-size: 0.9rem;
         color: white;
         &__redirect{
-            font-size: 0.7rem;
             text-decoration:underline;
+            &__link{
+                font-size: 0.7rem !important;
+            }
         }
         a{
             color:white;
             font-weight: bold;
             font-family: 'Limelight', 'cursive';
             transition: all 0.5s;
+            font-size: 0.9rem;
         }
     }
 }
@@ -74,6 +77,13 @@
     margin-left: 0;
     transition: all 0.7s;
 }
+@media only screen and (min-width: 620px){
+    .featured-item{
+        &__info{
+            left: 30%;
+        }
+    }
+}
 @media only screen and (min-width: 1020px){
     .wrapper-featured{
         width: 170%;
@@ -82,7 +92,10 @@
     .featured-item{
         width: 23%;
         &__info{
-            left: 9rem;
+            left: 35%;
+            a{
+                font-size: 1.2rem;
+            }
         }
     }
     .move-right{
