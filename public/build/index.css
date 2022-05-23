@@ -1774,6 +1774,33 @@ ul{
     }
 }
 
+.wrapper-page{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.wrapper-page__content{
+
+    }
+
+.wrapper-page__sidebar{
+
+    }
+
+@media only screen and (min-width: 1020px){
+    .wrapper-page{
+        flex-direction: row;
+    }
+        .wrapper-page__content{
+            width: 75%;
+        }
+        .wrapper-page__sidebar{
+            width: 22%;
+        }
+}
+
 .widget-area-footer{
     display: flex;
     flex-direction: column;
