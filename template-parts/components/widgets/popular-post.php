@@ -13,11 +13,29 @@
 
         // Back-end display of widget
         public function form( $instance ) {
-            echo 'Sin opciones para mostrar';
+            //echo 'Sin opciones para mostrar';
+
+            $defaults= array(
+                'number_post'=> 1
+            );
+
+            extract(wp_parse_args( (array) $instance, $defaults));
+        ?>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'number_post' ) ); ?>"><?php _e( 'Number category:', 'text_domain' ); ?></label>
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'number_post' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number_post' ) ); ?>" type="number" value="<?php echo esc_attr( $number_post ); ?>" />
+        </p>
+        <?php
+        }
+        public function update($new_instance, $old_instance){
+            $instance = $old_instance;
+            $instance['number_post'] = isset($new_instance['number_post']) ? wp_strip_all_tags($new_instance['number_post']):'';
+            return $instance;
         }
 
         // Front-end display of widget
         public function widget( $args, $instance ) {
+            $number_post = isset($instance['number_post'])? $instance['number_post'] : '';
             echo $args[ 'before_widget' ];
 
             ?>
@@ -29,7 +47,7 @@
                         'meta_key'=>'votes_count',
                         'orderby' => 'meta_value_num',
                         'order' => 'DESC',
-                        'posts_per_page' => 5,
+                        'posts_per_page' => $number_post,
                         ];
                         $the_query = new WP_Query( $args_post );
                     ?>
