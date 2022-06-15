@@ -9,8 +9,8 @@
     position: relative;
     &__name{
         position: absolute;
-        bottom: 3rem;
-        left: 2.5rem;
+        bottom: 40%;
+        left: 26%;
         border: 2px solid white;
         padding: 0.2rem;
         color: white;
@@ -47,7 +47,7 @@
     .category-item{
         width: 25%;
         &__name{
-            left: 10.5rem;
+            left: 40%;
         }
     }
 }

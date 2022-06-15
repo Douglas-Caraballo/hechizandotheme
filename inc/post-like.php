@@ -74,10 +74,10 @@ function get_post_like_link($post_id){
 
     $output = '<p class="post-like">';
     if(has_already_voted($post_id))
-        $output .= ' <span title="'.__('I like this article', $themename).'" class="like alreadyvoted"></span>';
+        $output .= ' <span title="'.__('Me gusta este artículo', $themename).'" class="like alreadyvoted"></span>';
     else
         $output .= '<a href="#" data-post_id="'.$post_id.'">
-                    <span  title="'.__('I like this article', $themename).'"class="like"></span>
+                    <span  title="'.__('Me gusta este artículo', $themename).'"class="like"></span>
                 </a>';
     $output .= '<span class="count">'.$vote_count.'</span></p>';
 
