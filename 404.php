@@ -12,6 +12,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<section class="error-404 not-found">
+		<?php get_template_part('template-parts/content-404'); ?>
 
 		</section><!-- .error-404 -->
 	</main><!-- #main -->

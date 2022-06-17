@@ -1775,6 +1775,65 @@ ul{
     }
 }
 
+.head-404{
+    display: flex;
+    justify-content: center;
+}
+
+.head-404__number{
+        font-size: 10rem;
+        font-family: 'Lobster', cursive;
+        color: #C7A770;
+        text-shadow: 0 1px 0 #E6DDC4, 0 2px 0 #E6DDC4, 0 3px 0 #F0E9D2, 0 4px 0 #C7A770, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    }
+
+.head-404__picture{
+        width: 12rem;
+        height: 12rem;
+    }
+
+.content-404{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content-404__message{
+        font-size: 1.5rem;
+        font-weight: light;
+        font-family: 'Limelight', 'cursive';
+        text-align: center;
+    }
+
+.content-404__btn{
+        padding: 0.75rem;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        font-weight: bold;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        transform: ease-in-out;
+        transition-duration: 500;
+    }
+
+.icon-btn{
+    width: 1rem;
+    height: 1rem;
+}
+
+.content-404__btn:hover{
+        padding: 0.75rem 1.5rem;
+        background-color: #262626;
+        color: #C7A770;
+        transform: scale(1.0);
+}
+
 .wrapper-page{
     display: flex;
     flex-direction: column;
