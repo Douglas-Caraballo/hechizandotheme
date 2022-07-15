@@ -1817,7 +1817,7 @@ ul{
         cursor: pointer;
         transition: all 0.5s;
         font-weight: bold;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         transform: ease-in-out;
         transition-duration: 500;
     }
@@ -1962,13 +1962,26 @@ ul{
 
 .widget-area-footer .wp-block-gallery.has-nested-images{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 150px);
         gap: 1rem;
         padding: 1rem;
     }
 
 .widget-area-footer .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image){
     width: 100%;
+}
+
+.widget-area-footer .categories-image-widget{
+    display: flex;
+    justify-content: center;
+}
+
+.widget-area-footer .categories-image-widget__wrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
 }
 
 .widget-area-footer .categories-image-widget__wrapper__item__image{
@@ -1985,10 +1998,10 @@ ul{
 .widget-area-footer .wp-block-tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     padding: 1rem;
-    width: 22rem;
 }
 
 .widget-area-footer .wp-block-tag-cloud a{
@@ -2005,8 +2018,8 @@ ul{
 @media only screen and (min-width: 1020px){
     .widget-area-footer{
         display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+        flex-direction: row;
+        gap: 4rem;
     }
 
 }

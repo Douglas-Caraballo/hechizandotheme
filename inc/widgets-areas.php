@@ -25,6 +25,7 @@ function hechizando_widgets_areas(){
         'after_widget'=>'</div>'
 
     ));
+
 }
 
 add_action( 'widgets_init','hechizando_widgets_areas');
