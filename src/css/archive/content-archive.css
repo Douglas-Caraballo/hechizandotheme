@@ -1,39 +1,67 @@
 .archive-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 2rem;
+    .page-header{
+    height: 5rem;
+    width: 100%;
+    background-color: #e7e7e7;
+    }
+    .page-title{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: #e7e7e7;
 }
+    .page-title span{
+        color: #2B2B2B;
+    }
+}
+
 .wrapper-content-archive{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    padding: 1rem;
 }
 .archive-wrapper-item{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 100%;
+        gap: 1rem;
+        padding-left: 2rem;
+    }
 }
 .archive-item{
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    position: relative;
+    height: 13rem;
     &__figure{
         width: 100%;
-        height: 10rem;
+        position: relative;
+        height: 100%;
+        filter: brightness(70%);
     }
     &__info{
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        padding: 1rem;
+        width: 100%;
         .archive-title-post{
             text-align: center;
         }
         &__detalist{
             display: flex;
             gap:1rem;
+            color: white;
             &__author{
                 color: #000;
                 transition: all 0.5s;
@@ -55,6 +83,13 @@
         }
     }
 }
+.archive-item__info__detalist a{
+    color: white;
+}
+.archive-item:first-child {
+        grid-row: 1 / span 2;
+        height: 100%;
+        }
 .archive-thumbnail{
     width: 100%;
     height: 100%;
@@ -62,7 +97,7 @@
 }
 .archive-title-post{
     a{
-        color: rgb(115,61,145);
+        color: white;
     }
 }
 
@@ -97,22 +132,14 @@
         gap: 3rem;
     }
     .archive-wrapper-item{
-        width: 72%;
+        width: 80%;
         flex-direction: row;
         flex-wrap: wrap;
     }
     .wrapper-sidebar{
         width: 22%;
     }
-    .archive-item{
-        width: 49%;
-        &__figure{
-            height: 13rem;
-        }
-        &__info{
-            width: 100%;
-        }
-    }
+
     .Navigation{
         .NavigationList{
             li:hover{

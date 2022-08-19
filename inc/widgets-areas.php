@@ -26,6 +26,15 @@ function hechizando_widgets_areas(){
 
     ));
 
+    register_sidebar(array(
+        'name'=> __('Hechizando 404', 'hechizandotheme'),
+        'id'=>'page-404',
+        'description'=> __('Widget area to define widgest into the 404 page','hechizandotheme'),
+        'before_widget'=>'<div class="%2$s">',
+        'after_widget'=>'</div>'
+
+    ));
+
 }
 
 add_action( 'widgets_init','hechizando_widgets_areas');

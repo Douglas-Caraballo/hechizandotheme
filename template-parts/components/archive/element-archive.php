@@ -11,9 +11,6 @@
             <span><h5><?php echo get_the_date('M d, Y'); ?></h5></span>
             <span><h5><?php echo get_post_like_link(get_the_ID()); ?></h5></span>
         </div>
-        <div class="archive-item__info__excerpt">
-            <?php the_excerpt(); ?>
-        </div>
         <a class="archive-item__info__archive-link search-buton-link" href="<?= esc_url(get_permalink()); ?>">Leer &rarr;</a>
     </div>
 </article>

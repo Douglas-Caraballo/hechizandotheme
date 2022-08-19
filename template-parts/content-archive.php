@@ -8,6 +8,7 @@
 </header><!-- .page-header -->
 <div class="wrapper-content-archive">
     <div class="archive-wrapper-item">
+    <div class="archive-wrapper-item__content">
         <?php
             /* Start the Loop */
             while ( have_posts() ) :
@@ -22,14 +23,15 @@
 
             endwhile;
 
-            hechizandotheme_numeric_pagination();
-
             else :
 
-            get_template_part( 'template-parts/content', 'none' );
+                get_template_part( 'template-parts/content', 'none' );
 
-            endif;
-        ?>
+                endif;
+            ?>
+            </div>
+
+    <?php hechizandotheme_numeric_pagination(); ?>
     </div>
     <div class="wrapper-sidebar">
         <?php get_sidebar(); ?>

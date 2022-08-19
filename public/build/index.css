@@ -776,6 +776,10 @@ ul{
     gap: 0.6rem;
 }
 
+input{
+    outline: none;
+}
+
 .wrapper-single{
     display: flex;
     flex-direction: column;
@@ -1127,33 +1131,37 @@ ul{
 
 .navigation-post-single{
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
     margin-top: 2rem;
     padding: 0 2rem;
+    justify-content: center;
 }
 
 .navigation-article{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: 50%;
+    width: 40%;
 }
 
 .navigation-article h4{
-        text-align: center;
         font-family: 'Lancelot', 'cursive';
-        font-size: 1.3rem;
     }
 
 .post-nav{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    width: 100%;
 }
+
+.article-second .post-nav{
+        display: flex;
+        align-items: flex-end;
+    }
 
 .navigation-thumb{
     width: 100%;
-    height: 8rem;
+    height: 12rem;
 }
 
 .navigation-thumb__img{
@@ -1162,24 +1170,74 @@ ul{
         -o-object-fit:cover;
            object-fit:cover;
         transition: all 0.7s;
+        filter: brightness(50%);
     }
 
 .navigation-post-title{
+    position: absolute;
     font-family: 'Lancelot', 'cursive';
+    bottom: 28px;
     color: #000;
-    text-align: center;
     font-size: 1.1rem;
     transition: all 0.7s;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.single-header__figure{
+    height: 34rem;
 }
 
 @media only screen and (min-width: 1020px){
-        .post-nav:hover .navigation-post-title{
-            color: rgb(115,61,145);
-            font-size: 1.3rem;
+    .navigation-post-go{
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        bottom: 0;
+        padding: 10px 35px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transform: translate(0, 50%);
+    }
+        .navigation-post-go__prev{
+            text-align: start;
         }
-            .post-nav:hover .navigation-thumb__img{
-                filter: brightness(50%);
-            }
+        .navigation-post-go__next{
+            text-align: end;
+        }
+    .navigation-post-go::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 0;
+        left: 20px;
+        background: #C7A770;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .navigation-article{
+        position: relative;
+    }
+        .navigation-article h4{
+            position: relative;
+            right: 0;
+            z-index: 1;
+            bottom: 0;
+            margin: 0;
+            color: white;
+        }
+        .navigation-article:hover .navigation-post-go::before{
+            left: 0;
+            right: 0;
+    }
 }
 
 .comments-area{
@@ -1266,6 +1324,7 @@ ul{
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
     }
 
 .comments-area .comment-respond .comment-reply-title{
@@ -1278,6 +1337,7 @@ ul{
             display: flex;
             flex-direction: column;
             gap:1rem;
+            max-width: 800px;
         }
 
 .comments-area .comment-respond .comment-form label{
@@ -1295,6 +1355,12 @@ ul{
 .comments-area .comment-respond .comment-form .comment-form-comment textarea{
                     border:2px solid #c7a770;
                     font-size: 1rem;
+                    outline: none;
+                    border-radius: 0.25rem;
+                    padding-top: 1rem;
+                    padding-left: 1rem;
+                    color: #383838;
+                    transition: all 0.5s;
                 }
 
 .comments-area .comment-respond .comment-form .comment-form-author{
@@ -1307,6 +1373,8 @@ ul{
                     border:2px solid #c7a770;
                     padding: 0.5rem;
                     font-size: 1rem;
+                    border-radius: 0.25rem;
+                    transition: all 0.5s;
                 }
 
 .comments-area .comment-respond .comment-form .comment-form-email{
@@ -1319,6 +1387,8 @@ ul{
                     border:2px solid #c7a770;
                     padding: 0.5rem;
                     font-size: 1rem;
+                    border-radius: 0.25rem;
+                    transition: all 0.5s;
                 }
 
 .comments-area .comment-respond .comment-form .comment-form-url{
@@ -1331,7 +1401,13 @@ ul{
                     border:2px solid #c7a770;
                     padding: 0.5rem;
                     font-size: 1rem;
+                    border-radius: 0.25rem;
+                    transition: all 0.5s;
                 }
+
+.comments-area .comment-respond .comment-form .comment-form-cookies-consent{
+                width: 100%;
+            }
 
 .comments-area .comment-respond .comment-form .comment-form-cookies-consent label{
                     font-weight: lighter;
@@ -1345,7 +1421,24 @@ ul{
                     background: #fff;
                     text-transform: uppercase;
                     border:2px solid #c7a770;
+                    border-radius: 0.25rem;
+                    transition: ease-in 0.5s;
                 }
+
+.comments-area .comment-respond .comment-form .form-submit .submit:hover{
+                        background: #c7a770;
+                        color: white;
+                    }
+
+textarea:hover{
+    background: #F7ECDE;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.comments-area input:hover{
+    background: #F7ECDE;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
 
 @media only screen and (min-width: 1020px){
                     .comments-area .comment-list .comment .comment-body .comment-meta{
@@ -1364,18 +1457,23 @@ ul{
             .comments-area .comment-respond .comment-form{
                 flex-direction: row;
                 flex-wrap:wrap;
+                justify-content: center;
             }
                 .comments-area .comment-respond .comment-form .comment-form-comment{
                     width: 100%;
+                    border-radius: 0.25rem;
                 }
                 .comments-area .comment-respond .comment-form .comment-form-author{
-                    width: 32%;
+                    width: 49%;
+                    border-radius: 0.25rem;
                 }
                 .comments-area .comment-respond .comment-form .comment-form-email{
-                    width: 32%;
+                    width: 49%;
+                    border-radius: 0.25rem;
                 }
                 .comments-area .comment-respond .comment-form .comment-form-url{
-                    width: 32%;
+                    width: 100%;
+                    border-radius: 0.25rem;
                 }
 }
 
@@ -1432,18 +1530,29 @@ ul{
     }
 }
 
-.archive-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 2rem;
+.archive-wrapper .page-header{
+    height: 5rem;
+    width: 100%;
+    background-color: #e7e7e7;
+    }
+
+.archive-wrapper .page-title{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: #e7e7e7;
 }
+
+.archive-wrapper .page-title span{
+        color: #2B2B2B;
+    }
 
 .wrapper-content-archive{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    padding: 1rem;
 }
 
 .archive-wrapper-item{
@@ -1453,21 +1562,37 @@ ul{
     width: 100%;
 }
 
+.archive-wrapper-item__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 100%;
+        gap: 1rem;
+        padding-left: 2rem;
+    }
+
 .archive-item{
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    position: relative;
+    height: 13rem;
 }
 
 .archive-item__figure{
         width: 100%;
-        height: 10rem;
+        position: relative;
+        height: 100%;
+        filter: brightness(70%);
     }
 
 .archive-item__info{
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        padding: 1rem;
+        width: 100%;
     }
 
 .archive-item__info .archive-title-post{
@@ -1477,6 +1602,7 @@ ul{
 .archive-item__info__detalist{
             display: flex;
             gap:1rem;
+            color: white;
         }
 
 .archive-item__info__detalist__author{
@@ -1503,6 +1629,15 @@ ul{
             background-color: rgba(115,61,145,0.4);
         }
 
+.archive-item__info__detalist a{
+    color: white;
+}
+
+.archive-item:first-child {
+        grid-row: 1 / span 2;
+        height: 100%;
+        }
+
 .archive-thumbnail{
     width: 100%;
     height: 100%;
@@ -1511,7 +1646,7 @@ ul{
 }
 
 .archive-title-post a{
-        color: rgb(115,61,145);
+        color: white;
     }
 
 .Navigation{
@@ -1550,22 +1685,13 @@ ul{
         gap: 3rem;
     }
     .archive-wrapper-item{
-        width: 72%;
+        width: 80%;
         flex-direction: row;
         flex-wrap: wrap;
     }
     .wrapper-sidebar{
         width: 22%;
     }
-    .archive-item{
-        width: 49%;
-    }
-        .archive-item__figure{
-            height: 13rem;
-        }
-        .archive-item__info{
-            width: 100%;
-        }
             .Navigation .NavigationList li:hover{
                 background: rgba(115,61,145,0.7);
             }
@@ -1796,7 +1922,7 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .content-404__message{
@@ -1804,7 +1930,21 @@ ul{
         font-weight: light;
         font-family: 'Limelight', 'cursive';
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
     }
+
+.content-404__message-recent{
+            padding-top: 1rem;
+            font-family: 'Limelight', 'cursive';
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
 
 .content-404__btn{
         padding: 0.75rem;
@@ -1817,7 +1957,7 @@ ul{
         cursor: pointer;
         transition: all 0.5s;
         font-weight: bold;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         transform: ease-in-out;
         transition-duration: 500;
     }
@@ -1833,6 +1973,80 @@ ul{
         color: #C7A770;
         transform: scale(1.0);
 }
+
+.content-404__btn:hover .icon{
+            filter: invert(100%);
+        }
+
+.message-one{
+    font-size: 2rem;
+}
+
+.content-404__message-recent::after{
+    content: "\2193";
+    font-size: 2rem;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+}
+
+.widget-area-page-404 .widget_recent_entries{
+        width: 100%;
+        padding: 2rem;
+    }
+
+.widget-area-page-404 .wp-block-latest-posts__list{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+    }
+
+.widget-area-page-404 .wp-block-latest-posts__featured-image{
+        width: 100%;
+        height: 10rem;
+    }
+
+.widget-area-page-404 .wp-block-latest-posts__featured-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0.25rem;
+        -o-object-fit: cover;
+           object-fit: cover;
+        filter: brightness(0.7);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+.widget-area-page-404 .wp-block-latest-posts__list li{
+            width: 15rem;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            position: relative;
+        }
+
+.widget-area-page-404 .wp-block-latest-posts__list a{
+            text-align: center;
+            position: absolute;
+            top: 4rem;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-shadow: -4px 2px 8px rgba(45,45,45,0.89);
+        }
+
+.widget-area-page-404 .wp-block-latest-posts__list:hover li{
+            filter:blur(3px);
+            opacity:.5;
+            transform: scale(.98);
+            box-shadow:none;
+        }
+
+.widget-area-page-404 .wp-block-latest-posts__list:hover li:hover{
+            transform:scale(1);
+            filter:blur(0px);
+            opacity:1;
+            box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+        }
 
 .wrapper-page{
     display: flex;
