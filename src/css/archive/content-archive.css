@@ -32,7 +32,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         width: 100%;
         gap: 1rem;
-        padding-left: 2rem;
+        padding-left: 0;
     }
 }
 .archive-item{
@@ -135,6 +135,9 @@
         width: 80%;
         flex-direction: row;
         flex-wrap: wrap;
+        &__content{
+            padding-left: 2rem;
+        }
     }
     .wrapper-sidebar{
         width: 22%;

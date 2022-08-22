@@ -1567,7 +1567,7 @@ textarea:hover{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         width: 100%;
         gap: 1rem;
-        padding-left: 2rem;
+        padding-left: 0;
     }
 
 .archive-item{
@@ -1689,6 +1689,9 @@ textarea:hover{
         flex-direction: row;
         flex-wrap: wrap;
     }
+        .archive-wrapper-item__content{
+            padding-left: 2rem;
+        }
     .wrapper-sidebar{
         width: 22%;
     }
@@ -1797,13 +1800,27 @@ textarea:hover{
                         color: #c7a770;
                     }
 
+.wrapper-search .page-header{
+    height: 5rem;
+    width: 100%;
+    background-color: #e7e7e7;
+    padding-left: 2rem;
+    }
+
+.wrapper-search .page-header .page-title{
+        height: 100%;
+        display: flex;
+        align-items: center;
+            }
+
 .search-item{
     display: flex;
     flex-direction: column;
     gap:1rem;
-    padding: 0.5rem;
     border: 2px solid #ccc;
     border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    width: 100%;
 }
 
 .search-item .entry-title{
@@ -1865,7 +1882,6 @@ textarea:hover{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 2rem;
 }
 
 .entry-summary{
@@ -1873,6 +1889,8 @@ textarea:hover{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .search-buton-link{
@@ -1893,6 +1911,7 @@ textarea:hover{
             }
             .search-item .search-post .entry-summary{
                 width: 60%;
+                padding: 0;
             }
     .search-buton-link:hover{
         padding: 0.5rem 1rem;
