@@ -10,16 +10,17 @@
 .featured-item{
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
     &__figure{
         width: 100%;
         height: 12rem;
+        position: relative;
     }
     &__info{
         position: absolute;
-        width: 11rem;
+        width: 100%;
         text-align: center;
-        top: 23%;
-        left: 9%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -77,22 +78,14 @@
     margin-left: 0;
     transition: all 0.7s;
 }
-@media only screen and (min-width: 620px){
-    .featured-item{
-        &__info{
-            left: 30%;
-        }
-    }
-}
+
 @media only screen and (min-width: 1020px){
     .wrapper-featured{
         width: 170%;
         margin-left: -35%;
     }
     .featured-item{
-        width: 23%;
         &__info{
-            left: 35%;
             a{
                 font-size: 1.2rem;
             }

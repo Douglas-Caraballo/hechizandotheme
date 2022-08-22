@@ -275,19 +275,20 @@ ul{
 .featured-item{
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .featured-item__figure{
         width: 100%;
         height: 12rem;
+        position: relative;
     }
 
 .featured-item__info{
         position: absolute;
-        width: 11rem;
+        width: 100%;
         text-align: center;
-        top: 23%;
-        left: 9%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -355,23 +356,11 @@ ul{
     transition: all 0.7s;
 }
 
-@media only screen and (min-width: 620px){
-        .featured-item__info{
-            left: 30%;
-        }
-}
-
 @media only screen and (min-width: 1020px){
     .wrapper-featured{
         width: 170%;
         margin-left: -35%;
     }
-    .featured-item{
-        width: 23%;
-    }
-        .featured-item__info{
-            left: 35%;
-        }
             .featured-item__info a{
                 font-size: 1.2rem;
             }
