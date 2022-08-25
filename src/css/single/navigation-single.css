@@ -4,11 +4,12 @@
     margin-top: 2rem;
     padding: 0 2rem;
     justify-content: center;
+    flex-direction: column;
 }
 .navigation-article{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    
     h4{
         font-family: 'Lancelot', 'cursive';
     }
@@ -53,7 +54,71 @@
 .single-header__figure{
     height: 34rem;
 }
+.navigation-post-go{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+    padding: 10px 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    -webkit-transform: translate(0, 50%);
+    -moz-transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    -o-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    &__prev{
+        text-align: start;
+    }
+    &__next{
+        text-align: end;
+    }
+}
+.navigation-post-go::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    background: #C7A770;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.navigation-article{
+    position: relative;
+    h4{
+        position: relative;
+        right: 0;
+        z-index: 1;
+        bottom: 0;
+        margin: 0;
+        color: white;
+    }
+}
+
+.navigation-article:hover{
+    .navigation-post-go::before{
+        left: 0;
+        right: 0;
+}
+}
+
 @media only screen and (min-width: 1020px){
+    .navigation-post-single{
+        display: flex;
+        flex-direction: row;
+    }
     .navigation-post-go{
         display: block;
         position: absolute;
@@ -97,6 +162,7 @@
     }
     .navigation-article{
         position: relative;
+        width: 40%;
         h4{
             position: relative;
             right: 0;

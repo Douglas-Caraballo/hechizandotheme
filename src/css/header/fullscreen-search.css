@@ -12,7 +12,16 @@
         top:20%;
         text-align: center;
         .search-container{
+            display: flex;
+            justify-content: center;
             position: relative;
+            &__content-form{
+                position: relative;
+                width: max-content;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+            }
             &__search-bar{
                 background-color: #000;
                 border-radius:0.5rem;
@@ -29,8 +38,8 @@
                 border: none;
                 background-color: transparent;
                 height: 100%;
-                right: 25%;
                 cursor: pointer;
+                padding-right: 1rem;
                 &__img{
                     width: 1.5rem;
                 }

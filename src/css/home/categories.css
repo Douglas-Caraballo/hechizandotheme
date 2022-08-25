@@ -5,12 +5,15 @@
     justify-content: center;
     align-items: center;
 }
+.category-item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .category-item{
     position: relative;
     &__name{
         position: absolute;
-        bottom: 40%;
-        left: 26%;
         border: 2px solid white;
         padding: 0.2rem;
         color: white;
