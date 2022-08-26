@@ -6,8 +6,10 @@
     .wp-block-latest-posts__list{
         display: flex;
         justify-content: center;
+        flex-direction: column;
         gap: 1rem;
         cursor: pointer;
+        align-items: center;
     }
     .wp-block-latest-posts__featured-image{
         width: 100%;
@@ -49,4 +51,12 @@
             opacity:1;
             box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
         }
+}
+@media only screen and (min-width: 1020px){
+    .widget-area-page-404{
+        .wp-block-latest-posts__list{
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }

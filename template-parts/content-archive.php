@@ -31,9 +31,9 @@
             ?>
             </div>
 
-    <?php hechizandotheme_numeric_pagination(); ?>
     </div>
     <div class="wrapper-sidebar">
         <?php get_sidebar(); ?>
     </div>
 </div>
+<?php hechizandotheme_numeric_pagination(); ?>
