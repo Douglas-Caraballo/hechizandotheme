@@ -13,7 +13,7 @@
     }
     .wp-block-gallery.has-nested-images{
         display: grid;
-        grid-template-columns: repeat(3, 100px);
+        grid-template-columns: repeat(auto-fill, [col-start] minmax(100px, 1fr) [col-end]);
         justify-content: center;
         gap: 1rem;
         padding: 1rem;
